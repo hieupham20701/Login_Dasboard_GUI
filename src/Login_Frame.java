@@ -14,8 +14,6 @@ public class Login_Frame extends javax.swing.JFrame {
         lblPass.setIcon(new ImageIcon(getClass().getResource("Image/password.png")));
         lblShowpass.setIcon(new ImageIcon(getClass().getResource("Image/eye.png")));
         lblup.setIcon(new ImageIcon(getClass().getResource("Image/up.png")));
-        
-           
     }
 
     /**
