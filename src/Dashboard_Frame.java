@@ -13,6 +13,10 @@ public class Dashboard_Frame extends javax.swing.JFrame {
         
         Border yellow_border = BorderFactory.createMatteBorder(1, 0, 1, 0, Color.yellow);
        
+        JLabel[] menuLabel = new JLabel[6];
+        
+    
+        
     public Dashboard_Frame() {
         super("Dashboard");
         initComponents();
@@ -21,9 +25,22 @@ public class Dashboard_Frame extends javax.swing.JFrame {
         lblAppLogo.setIcon(new ImageIcon(getClass().getResource("Image/logo1.png")));
         Border borderTitle = BorderFactory.createMatteBorder(0, 0, 4, 0, Color.yellow);
         pnTitle.setBorder(borderTitle);
+        
+        menuLabel[0] = lblHome;
+        menuLabel[1] = lblUser;        
+        menuLabel[2] = lblProduct;
+        menuLabel[3] = lblSettings;
+        menuLabel[4] = lblContact;
+        menuLabel[5] = lblCalender;
+
         addActiontoMenuLabel();
+        
     }
     private void setBackroundMenu(JLabel label){
+        for(JLabel menuItem : menuLabel){
+            menuItem.setBackground(new Color(255,102,51));
+            menuItem.setForeground(Color.WHITE);
+        }
         label.setBackground(Color.white);
         label.setForeground(new Color(255,102,51));
     }
@@ -83,12 +100,12 @@ public class Dashboard_Frame extends javax.swing.JFrame {
         pnTitle = new javax.swing.JPanel();
         lblAppLogo = new javax.swing.JLabel();
         lblAppName = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        lblProduct = new javax.swing.JLabel();
+        lblHome = new javax.swing.JLabel();
+        lblSettings = new javax.swing.JLabel();
+        lblUser = new javax.swing.JLabel();
+        lblCalender = new javax.swing.JLabel();
+        lblContact = new javax.swing.JLabel();
         pnDasboard = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -161,41 +178,41 @@ public class Dashboard_Frame extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        jLabel1.setBackground(new java.awt.Color(255, 102, 51));
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Product");
-        jLabel1.setOpaque(true);
+        lblProduct.setBackground(new java.awt.Color(255, 102, 51));
+        lblProduct.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblProduct.setForeground(new java.awt.Color(255, 255, 255));
+        lblProduct.setText("Product");
+        lblProduct.setOpaque(true);
 
-        jLabel2.setBackground(new java.awt.Color(255, 102, 51));
-        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Home");
-        jLabel2.setOpaque(true);
+        lblHome.setBackground(new java.awt.Color(255, 102, 51));
+        lblHome.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblHome.setForeground(new java.awt.Color(255, 255, 255));
+        lblHome.setText("Home");
+        lblHome.setOpaque(true);
 
-        jLabel3.setBackground(new java.awt.Color(255, 102, 51));
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Settings");
-        jLabel3.setOpaque(true);
+        lblSettings.setBackground(new java.awt.Color(255, 102, 51));
+        lblSettings.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblSettings.setForeground(new java.awt.Color(255, 255, 255));
+        lblSettings.setText("Settings");
+        lblSettings.setOpaque(true);
 
-        jLabel4.setBackground(new java.awt.Color(255, 102, 51));
-        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("User");
-        jLabel4.setOpaque(true);
+        lblUser.setBackground(new java.awt.Color(255, 102, 51));
+        lblUser.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblUser.setForeground(new java.awt.Color(255, 255, 255));
+        lblUser.setText("User");
+        lblUser.setOpaque(true);
 
-        jLabel5.setBackground(new java.awt.Color(255, 102, 51));
-        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Calendar");
-        jLabel5.setOpaque(true);
+        lblCalender.setBackground(new java.awt.Color(255, 102, 51));
+        lblCalender.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblCalender.setForeground(new java.awt.Color(255, 255, 255));
+        lblCalender.setText("Calendar");
+        lblCalender.setOpaque(true);
 
-        jLabel6.setBackground(new java.awt.Color(255, 102, 51));
-        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Contact");
-        jLabel6.setOpaque(true);
+        lblContact.setBackground(new java.awt.Color(255, 102, 51));
+        lblContact.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblContact.setForeground(new java.awt.Color(255, 255, 255));
+        lblContact.setText("Contact");
+        lblContact.setOpaque(true);
 
         javax.swing.GroupLayout pnMenuLayout = new javax.swing.GroupLayout(pnMenu);
         pnMenu.setLayout(pnMenuLayout);
@@ -205,12 +222,12 @@ public class Dashboard_Frame extends javax.swing.JFrame {
             .addGroup(pnMenuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblProduct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblCalender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblContact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblHome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         pnMenuLayout.setVerticalGroup(
@@ -218,17 +235,17 @@ public class Dashboard_Frame extends javax.swing.JFrame {
             .addGroup(pnMenuLayout.createSequentialGroup()
                 .addComponent(pnTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblUser, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(9, 9, 9)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblContact, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblCalender, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -461,15 +478,9 @@ public class Dashboard_Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -484,6 +495,12 @@ public class Dashboard_Frame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel lblAppLogo;
     private javax.swing.JLabel lblAppName;
+    private javax.swing.JLabel lblCalender;
+    private javax.swing.JLabel lblContact;
+    private javax.swing.JLabel lblHome;
+    private javax.swing.JLabel lblProduct;
+    private javax.swing.JLabel lblSettings;
+    private javax.swing.JLabel lblUser;
     private javax.swing.JPanel pnDasboard;
     private javax.swing.JPanel pnMenu;
     private javax.swing.JPanel pnTitle;
