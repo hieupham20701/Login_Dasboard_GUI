@@ -1,19 +1,20 @@
+package GUI;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+
+import DAO.DAO_Login;
+import connectDB.ConnectDB;
 public class Login_Frame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Login_Frame
-     */
+	
+	DAO_Login dao_login = new DAO_Login();
+	
     public Login_Frame() {
         initComponents();
         this.setLocationRelativeTo(null);
         //
-//        lblUser.setIcon(new ImageIcon(getClass().getResource("Image/user.png")));
-//        lblPass.setIcon(new ImageIcon(getClass().getResource("Image/password.png")));
-//        lblShowpass.setIcon(new ImageIcon(getClass().getResource("Image/eye.png")));
-//        lblup.setIcon(new ImageIcon(getClass().getResource("Image/up.png")));
     }
 
     /**
@@ -309,8 +310,27 @@ public class Login_Frame extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         //show the jPanel message
         timerDown.start();
-    }//GEN-LAST:event_btnLoginActionPerformed
+        ConnectDB.getInstance().connection();
 
+        String username = txtUser.getText().trim();
+        String password = txtPassword.getText().trim();
+        if(username.equals("")) {
+        	lblMess_Test.setText("Bạn chưa nhập username!!");
+
+        }
+        if(password.equals("")) {
+        	lblMess_Test.setText("Bạn chưa nhập password");
+        	
+        }
+        if(dao_login.getAccount(username, password)) {
+        	lblMess_Test.setText("Đăng nhập thành công");
+        	new Dashboard_Frame().setVisible(true);
+        }else {
+        	lblMess_Test.setText("Sai tên đăng nhập hoặc mật khẩu");
+        }
+        
+    }//GEN-LAST:event_btnLoginActionPerformed
+    
     private void chkShowPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkShowPassActionPerformed
            //show and hide the password
            if(chkShowPass.isSelected()){
